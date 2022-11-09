@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{>head}}
+</head>
+
+<body>
+    {{>header}}
+    <h2> Interests</h2>
+    <ul>
+        {{#each interests}}
+        <li> {{this.name}} - {{this.Amount}} </li>
+        {{/each}}
+    </ul>
+
+    {{>footer}}
+</body>
+</html>

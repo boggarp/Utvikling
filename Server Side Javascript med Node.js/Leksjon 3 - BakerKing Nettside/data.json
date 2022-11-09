@@ -1,0 +1,6 @@
+{
+    "title" : "Bakerking from file",
+    "description" : "The best place to get food",
+    "author" : "Børge Garpestad",
+    "desserts" : ["cake", "cookie", "ice cream"]
+}

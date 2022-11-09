@@ -1,0 +1,41 @@
+// ------              Sortering av tabell med tall               ----- //
+// -------------------------------------------------------------------- //
+
+let tabell = [1,5,5,9,1]
+
+console.log("Unsorted:")
+console.log(tabell)
+
+tabell.sort()
+console.log("Sorted:")
+console.log(tabell)
+
+tabell.reverse();
+console.log("Sorted reverse:")
+console.log(tabell)
+
+// ------   Funksjon med to parameter, ingen returverdi           ----- //
+//    Legg merke til linje 10, der kaller vi opp funksjonen             //
+//    Siden funksjonen ikke har noe returverdi lagrer vi ingenting her  //
+// -------------------------------------------------------------------- //
+
+function printTotalLength(string1,string2) {
+    let length = string1.length + string2.length
+    console.log(length)
+}
+printTotalLength("Børge", "Garpestad")
+
+
+// ------   Funksjon med to parameter og returverdi               ----- //
+//    Legg merke til linje 22, der kaller vi opp funksjonen             //
+//    Vi lagrer funksjonens returverdi i variabelen totalLength         //
+// -------------------------------------------------------------------- //
+//Funksjon med to paramter, og returnerer en verdi
+function getTotalLength(string1,string2) {
+    let length = string1.length + string2.length
+    return length
+}
+let totalLength = getTotalLength("Børge", "Garpestad")
+
+
+

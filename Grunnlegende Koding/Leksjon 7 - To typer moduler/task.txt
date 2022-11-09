@@ -1,0 +1,19 @@
+
+Oppgave Moduler
+-	Lag en modul som gjør det mulig å enkelt holde styr på alle karakterene dine.
+-	I felleskap gjør vi det slik at modulen kan:
+    o	Legge til en karrakter
+    o	Skrive ut alle karrakterene dine
+
+    Vi bruker  modulen i en annen fil. Tester at det fungerer å legge til karrakterer, og å skrive alle ut.
+
+
+    Vi lager to versjoner. 
+    
+    CommonJS
+    Den ene bruker modul-typen CommonJS Modul
+    - Denne versjonen består av filene main.cjs og my-grades.cjs
+
+    Es Module
+    Den andre bruker modul-typen ES Modul.
+    - Denne versjonen består av filene main.mjs og my-grades.mjs
