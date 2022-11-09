@@ -1,0 +1,36 @@
+
+body {
+    color: white;
+    background-color: black;
+}
+
+section {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid white;
+}
+
+#colorchanger {
+    width: 200px;
+    height: 40px;
+    background-color: blueviolet;
+    transition: 1s
+}
+
+#txt_result {
+    width: 200px;
+    height: 40px;
+    background-color: white;
+    color: black;
+}
+
+.button {
+    width: 100px;
+    padding: 10px 0px 10px 0px;
+    background-color: brown;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 30px;
+
+}

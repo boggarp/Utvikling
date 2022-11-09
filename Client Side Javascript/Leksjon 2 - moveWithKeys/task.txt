@@ -1,0 +1,3 @@
+<!-- Task: Få en boks til å flytte på seg, med piltastene -->
+<!-- Høyre-pil-tast er allerede kodet i js/moveWithKeys.js-->
+<!-- Klarer du å kode resten? -->
