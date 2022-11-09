@@ -63,7 +63,7 @@ if (svar === 9) {
 function einFunksjon(fornavn, etternavn) {
     console.log("Hei", fornavn, etternavn)
 }
-einFunksjon("Børge", "Garpestad")
+einFunksjon("Børge", "Garpestads")
 
 function kulFunksjon(navn) {
     console.log(navn, "er kul")
