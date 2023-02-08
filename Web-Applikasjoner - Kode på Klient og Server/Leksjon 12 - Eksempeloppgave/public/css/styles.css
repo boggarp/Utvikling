@@ -1,0 +1,44 @@
+body{
+    color: white;
+    background-color: black;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-family: sans-serif;
+}
+
+.content {
+    margin: 20px;
+}
+
+.content > a {
+    padding: 20px;
+    background-color: grey;
+    margin-bottom: 10px;
+    color: white;
+    display: block;
+    text-decoration: none;
+}
+
+.content p {
+    margin-left: 20px;
+
+}
+
+.content a:hover {
+    background-color: lightgrey;
+    color: black;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+    margin-left: 10px;
+    background-color: rgb(46, 46, 46);
+    padding: 7px;
+}
+
+nav a:hover{
+
+    background-color: rgb(84, 84, 84);
+
+}

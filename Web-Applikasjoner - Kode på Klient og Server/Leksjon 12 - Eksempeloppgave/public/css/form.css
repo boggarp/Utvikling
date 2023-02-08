@@ -1,0 +1,54 @@
+.form {
+    margin-top: 50px;
+    background-color: black;
+    width: 350px;
+
+    color: darkgrey;
+
+    font-family: 'Courier New', Courier, monospace;
+}
+
+input {
+    margin: 3px;
+    flex-grow: 1;
+}
+
+input[type="text"] {
+    min-width: 200px;
+}
+
+
+input[type="email"] {
+    min-width: 200px;
+}
+
+input[type=date] {
+    min-width: 200px;
+}
+
+input[type=radio] {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+input[type=checkbox] {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+input[type=submit] {
+    width: 100%;
+}
+
+label {
+    flex-grow: 1;
+    min-width: 130px;
+    display: inline-block;
+}
+
+fieldset {
+    display: flex;
+    justify-content: center;
+    
+}

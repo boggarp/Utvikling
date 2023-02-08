@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Legg til besøk</title>
+</head>
+<body>
+    {{>header}}
+
+    <div class="form">
+        <fieldset>
+            <legend>Legg til besøk</legend>
+            <form action="/addVisit" method="post">
+
+                 <select name="person_id" id="person_id">
+                    <option value="" selected disabled hidden>Velg person</option>
+                    {{#each personer}}
+                        <option value="{{this.id}}">{{this.fornavn}} {{this.etternavn}}</option>
+                    {{/each}}
+                </select>
+
+                <select name="land_id" id="land_id">
+                    <option value="" selected disabled hidden>Velg land</option>
+                    {{#each land}}
+                        <option value="{{this.id}}">{{this.navn}}</option>
+                    {{/each}}
+                </select>
+
+                <br><br>
+                <button>Send inn</button> 
+                
+            </form>
+        </fieldset>
+    </div>  
+</body>
+</html>

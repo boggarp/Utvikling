@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Admin</title>
+</head>
+<body>
+    {{>header}}
+
+    <!-- Add Person Form -->
+    <div class="form">
+        <fieldset>
+            <legend>Legg til person</legend>
+            <form action="/addPerson" method="post">
+               
+                <label for="navn">Fornavn:</label>
+                <input type="text" name="fornavn" id="fornavn">
+                <br>
+
+                <label for="navn">Etternavn:</label>
+                <input type="text" name="etternavn" id="etternavn">
+                <br>
+
+                <label for="navn">Postnummer:</label>
+
+
+
+                <select name="postnummer" id="postnummer">
+                    {{#each poststed}}
+                        <option value="{{this.postnummer}}">{{this.postnummer}} - {{this.poststed}}</option>
+                    {{/each}}
+                </select>
+
+
+
+
+
+
+                <br><br>
+                <button>Send inn</button> 
+
+            </form>
+        </fieldset>
+    </div>
+
+    <!-- Legg til land Form -->
+    <div class="form">
+        <fieldset>
+            <legend>Legg til land</legend>
+            <form action="/addLand" method="post">
+
+                <label for="navn">Navn:</label>
+                <input type="text" name="navn" id="navn">
+
+                <br><br>
+                <button>Send inn</button> 
+
+            </form>
+        </fieldset>
+    </div>
+
+    <!-- Legg til Poststed Form -->
+    <div class="form">
+        <fieldset>
+            <legend>Legg til poststed</legend>
+
+            <form action="/addPoststed" method="post">
+            
+                <label for="navn">Postnummer:</label>
+                <input type="text" name="postnummer" id="postnummer">
+                <br>
+
+                <label for="navn">Poststed:</label>
+                <input type="text" name="poststed" id="poststed">
+                <br>
+
+                <button>Send inn</button> 
+
+            </form>
+        </fieldset>
+    </div>
+    <br><br>
+    <!-- Slett personer -->
+
+
+    <!-- Add Person Form -->
+    <div class="form">
+        <fieldset>
+            <legend>Slett personer</legend>
+            <ul>
+            {{#each personer}}
+                <li>{{this.fornavn}} {{this.etternavn}} - <a href="/delete?id={{this.id}}">Slett</a> </li>
+            {{/each}} 
+            </ul>
+
+            </fieldset>
+    </div>
+    
+</body>
+</html>
