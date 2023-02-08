@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Chatprogram</title>
+</head>
+<body>
+
+    <h1>Registrer ved hjelp av Fetch</h1>
+    <hr>
+    
+    <form id="registerForm" action="/register">
+        <label for="username">Brukernavn:</label>
+        <input type="text" id="username" name="username">
+
+        <label for="password">Passord:</label>
+        <input type="password" id="password" name="password">
+
+        <button id ="registerButton" type="submit">Registrer</button>
+  </form>
+
+  <img src="img/loading.gif" id="loadingimg">
+  <div id="response">
+
+  </div>
+
+  <script>   
+      let form = document.getElementById("registerForm")
+      let response = document.getElementById("response")
+      let loadingimg = document.getElementById("loadingimg")
+      
+      registerButton = document.getElementById("registerButton")
+      registerButton.addEventListener("click",submitForm)
+
+      async function submitForm(event) {
+        event.preventDefault();
+        loadingimg.style.display = "block"
+        response.innerText = ""
+
+        //Gjør litt client-side testing av dataen...
+        let username = document.getElementById("username")
+        let password = document.getElementById("password")
+        if (username.value == "" || password.value =="") {
+            response.innerText = "Pleace provide a username and password"
+            return
+        }
+
+        //Sender så dataen, viss den ble godkjent
+        let result = await fetch(form.action, {method:'post', body: new URLSearchParams(new FormData(form))})
+        let resultData = await result.json()
+        loadingimg.style.display = "none"
+        if(result.ok) {
+            console.log("Result OK")
+            response.innerText = "User stored"
+        } else {
+            console.log("Result NOT OK")
+            response.innerText = resultData.message
+        }
+      }
+  </script>
+    
+
+</body>
+</html>
