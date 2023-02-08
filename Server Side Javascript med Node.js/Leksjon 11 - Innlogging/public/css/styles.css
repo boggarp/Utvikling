@@ -1,0 +1,16 @@
+body{
+    color: white;
+    background-color: black;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+    margin-left: 10px;
+    background-color: rgb(46, 46, 46);
+    padding: 7px;
+}
+
+nav a:hover{
+    background-color: rgb(84, 84, 84);
+}
