@@ -1,1 +1,6 @@
-{"tekst1":"Dette er en Json-data-eksempel-fil","person1":{"fornavn":"Birger","alder":23},"tabell1":["Hei","Hei2","Hei3","Hei4","Hei5","Hei6","Hei7","Hei","Hei","Hei 9","Hei 10","Hei 11","Hei 12","Hei 13","Hei 14"]}
+{
+    "tekst1":"Dette er en Json-data-eksempel-fil",
+    "person1":{
+        "fornavn":"Birger",
+        "alder":23},
+    "tabell1":["Hei","Hei2","Hei3","Hei4","Hei5","Hei6","Hei7","Hei","Hei","Hei 9","Hei 10","Hei 11","Hei 12","Hei 13","Hei 14"]}

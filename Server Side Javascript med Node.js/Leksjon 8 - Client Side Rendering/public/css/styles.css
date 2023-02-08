@@ -1,0 +1,28 @@
+body{
+    color: white;
+    background-color: black;
+}
+
+#messages p {
+    padding:4px;
+    background-color: grey;
+    margin-bottom: 5px;
+}
+
+nav {
+    margin-bottom: 20px;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+    margin-left: 10px;
+    background-color: rgb(46, 46, 46);
+    padding: 7px;
+}
+
+nav a:hover{
+
+    background-color: rgb(84, 84, 84);
+
+}

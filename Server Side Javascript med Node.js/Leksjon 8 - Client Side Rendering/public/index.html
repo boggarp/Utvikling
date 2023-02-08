@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="/js/clientApp.js" defer> </script>
+    <title>{{title}}</title>
+</head>
+<body>
+
+    <h1>Meldinger</h1>
+
+    <nav>
+        <a href="/">Fremside</a>
+        <a href="/om.html">Om programmet</a>
+    </nav>
+    <hr>
+    <div id="messages">
+    </div>
+
+    <button id="refreshBtn">Refresh</button>
+    <br><br>
+    <hr>
+    <form action="/insertMessage" method="post">
+        <label for="melding">Melding:</label>
+        <input type="text" name="melding"><br><br>
+        <label for="navn">Brukernavn:</label>
+        <input type="text" name="brukernavn"><br><br>
+        <input type="submit" value="Submit">
+    </form> 
+    
+
+</body>
+</html>
