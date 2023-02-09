@@ -3,7 +3,7 @@
 
 //   ---------           Validering av Skjema/Form med Javascript     ------------     //
 Eksempelet går ut på brukerregistrering. Brukernavn og passord skal registreres i en database, og
-når en glemmer å skrive inn brukernavn eller passord skal en få opp en feilmelding.
+når en ikke skriver passordet likt to ganger skal en få opp en feilmelding.
 
 Vi lager  et enkelt skjema i /public/index.html
 

@@ -13,10 +13,13 @@
 
 		<form id="registerForm" action="/register" method="post">
 			<label for="username">Brukernavn:</label>
-			<input type="text" id="username" name="username" />
+			<input type="text" id="username" name="username" required/>
 
 			<label for="password">Passord:</label>
-			<input type="password" id="password" name="password" />
+			<input type="password" id="password" name="password" required/>
+
+			<label for="password">Repeat Password:</label>
+			<input type="password" id="passwordCheck" name="passwordCheck" required/>
 
 			<button type="submit">Registrer</button>
 		</form>
@@ -33,10 +36,11 @@
 
 				const username = document.getElementById('username').value;
 				const password = document.getElementById('password').value;
+				const passwordCheck = document.getElementById('passwordCheck').value;
 
-				if (username == '' || password == '') {
+				if (passwordCheck !==  password) {
 					response.innerText =
-						'Pleace provide a username and password';
+						'Passordene er ikke like';
 					return;
 				}
 				form.submit();
