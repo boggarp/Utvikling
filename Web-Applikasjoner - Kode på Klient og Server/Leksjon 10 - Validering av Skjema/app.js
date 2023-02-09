@@ -9,15 +9,15 @@ app.post('/register', (request,response) => {
     let actionSuccessful = true
     //Mangler brukernavn/passord
     if (request.body.username == "" || request.body.password == "") {
-        return response.status(400).json({ message: 'Missing username/Password' });
+        return response.send("<p>Missing Username and Password</p>");
     }
     //Brukernavn allerede tatt
     if (usernames.includes(request.body.username)) {
-        return response.status(400).json({ message: 'Username is taken' });
+        return response.send("<p>Username is taken</p>");
     } 
     //Ingen problemer funnet
     usernames.push(request.body.username) 
-    return response.status(200).json({ message: 'Success' });
+    return response.send("<p>Sucess</p>");
 })
 
 //Starter opp applikasjonen

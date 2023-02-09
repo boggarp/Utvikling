@@ -4,6 +4,9 @@
 //   ---------           Info Post med Fetch     ------------     //
 Eksempelet går ut på brukerregistrering. Brukernavn og passord skal registreres i en database, og
 når en prøver å bruke et brukernavn som er opptatt, så skal en få forklarende. feilmelding.
+Her trenger vi kommunikasjon med serveren, for det er serveren som vet om brukernavnet er opptatt.
+Vi bruker derfor funksjonen fetch, til å sende en forespørsel, og når vi får svaret, kan vi 
+endre DOM, slik at feilmeldingen vises for brukeren. Alt uten at siden må refreshe.
 
 Vi kan sende post-meldinger til express-applikasjonen vår med et enkelt html-skjema:
 <form id="registerForm" action="/register">
@@ -22,6 +25,8 @@ Sentralt da blir å sende post-requestet med funksjonen fetch.
 Skjema, Koden for å sjekke inputen, gi tilbakemelding, og sende post-requestet med fetch ligger i filen /public/index.html. 
 
 Handler for skjemaet ligger i app.js. Handleren sørger også for å returnere relevante feilmeldinger.
+Vi bruker en enkel tabell for lagring av brukernavnene.
+I en fullverdig applikasjon hadde en for eksempel brukt en database.
 
 
 

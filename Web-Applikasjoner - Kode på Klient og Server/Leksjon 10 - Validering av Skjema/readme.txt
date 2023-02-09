@@ -12,6 +12,8 @@ I <script> tag i /public/index.html legger vi til en egen funksjon som trigges n
 det inn som vanlig.
 
 Handler for skjemaet ligger i app.js. Handleren sørger også for å returnere relevante feilmeldinger.
+Vi bruker en enkel tabell for lagring av brukernavnene.
+I en fullverdig applikasjon hadde en for eksempel brukt en database.
 
 
 
