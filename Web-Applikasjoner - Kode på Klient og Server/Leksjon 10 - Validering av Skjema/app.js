@@ -2,7 +2,7 @@ const setup = require('./setup.js')
 const app = setup.app
 
 
-let usernames = ["peder", "rolf", "hans"]
+let usernames = ["peder", "rolf", "hans"];
 //Handler for registrering av bruker
 app.post('/register', (request,response) => {
     console.log(request.body)
