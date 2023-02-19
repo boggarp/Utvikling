@@ -67,3 +67,73 @@
 
 5 - Last opp koden din ved å søke på "Deploy" i Command Pallete. 
     Dette vil automatisk laste opp koden din til Azure App Service og starte applikasjonen.
+
+
+////////////////////////////////////////
+//  D - Få sqlite til å fungere      ///
+////////////////////////////////////////
+
+1 - Bytt ut denne linjen her:
+    const db = sqlite3('database.db', {verbose: console.log}) //Tilkobling til databasen
+
+   Med disse linjene her:
+    const db = loadDbToMemory('database.db'); //Load database from file into memory
+    saveDb('database.db', 30, true); //Enable automatic saving of database to file every 30 minutes (Wait 30 minutes before first save)
+
+   Og legg inn disse funksjonene:
+
+/**
+ * Load an SQLite database from a file into memory.
+ * @param {string} db_filename - The name of the SQLite database file to load.
+ * @returns {object} A handle to the in-memory database.
+ */
+function loadDbToMemory(db_filename) {
+	//Database
+	const databaseStoragePath = path.join(__dirname, db_filename);
+
+	console.log(`Loading database from file: ${databaseStoragePath}`);
+
+	const fileDb = new sqlite3(databaseStoragePath);
+	const buffer = fileDb.serialize();
+	const db = new sqlite3(buffer, { verbose: console.log });
+	fileDb.close();
+	return db;
+}
+
+/**
+ * 
+ * @param {string} db_filename - en streng som representerer filnavnet for lagring av databasen.
+ * @param {int} backupIntervalMinutes - et valgfritt tall som representerer tidsintervallet, i minutter,
+ *                                    for funksjonen til å automatisk ta backup av databasen til fil.
+ *                                    Standardverdien er 0.
+ * @param {boolean} onlySchedule - en valgfri boolsk flagg som indikerer om man skal kun planlegge backup
+ *                           av databasen eller faktisk lagre databasen til fil. Standardverdien er false.
+ * @returns {boolean} indikerer om lagringsoperasjonen var vellykket eller ikke
+ */
+function saveDb(db_filename, backupIntervalMinutes = 0, onlySchedule = false) {
+	let IsSuccess = false;
+
+	if (!onlySchedule) {
+		console.log(`Saving in-memory database to file: ${db_filename}`);
+		const databaseStoragePath = path.join(__dirname, db_filename);
+		const buffer = db.serialize();
+		try {
+			fs.writeFileSync(databaseStoragePath, buffer);
+			console.log(`Database written to: ${db_filename}`);
+			IsSuccess = true;
+		} catch (err) {
+			console.error(err);
+			IsSuccess = false;
+		}
+	}
+	if (backupIntervalMinutes > 0)
+		setTimeout(
+			() => saveDb(db_filename, backupIntervalMinutes),
+			backupIntervalMinutes * 60 * 1000
+		);
+	return IsSuccess;
+}
+
+
+
+
