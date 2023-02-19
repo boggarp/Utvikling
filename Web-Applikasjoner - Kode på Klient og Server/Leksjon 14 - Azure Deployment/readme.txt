@@ -6,6 +6,11 @@
 
 //   ---------   Fremgangsmåte Deploy to Azure      ------------     //
 
+A - Klargjøring av koden din 
+B - Lag prosjekt på Azure Portal
+C - Deploye fra Visual Studio
+D - Få sqlite til å fungere
+
 ////////////////////////////////////////
 //  A - Klargjøring av koden din     ///
 ////////////////////////////////////////
