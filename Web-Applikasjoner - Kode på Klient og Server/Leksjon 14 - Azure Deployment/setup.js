@@ -33,12 +33,11 @@ exports.db = db;
 /////////////////////////////////////////////////////////////////////////////
 
 /**
- * Load an SQLite database from a file into memory.
- * @param {string} db_filename - The name of the SQLite database file to load.
- * @returns {object} A handle to the in-memory database.
+ * Laster en SQLite-database fra en fil inn i minnet.
+ * @param {string} db_filename - Navnet på SQLite-databasefilen som skal lastes.
+ * @returns {object} Databasen som nå er i minnet.
  */
 function loadDbToMemory(db_filename) {
-	//Database
 	const databaseStoragePath = path.join(__dirname, db_filename);
 
 	console.log(`Loading database from file: ${databaseStoragePath}`);
