@@ -73,6 +73,12 @@ D - Få sqlite til å fungere
 5 - Last opp koden din ved å søke på "Deploy" i Command Pallete. 
     Dette vil automatisk laste opp koden din til Azure App Service og starte applikasjonen.
 
+    Du finner logg for appen din her:
+    https://APPLIKASJONSNAVN.scm.azurewebsites.net/
+
+    På portal.azure.com kan du klikke deg inn på appen din. Her finner du en mengde informasjon og valg. 
+
+
 
 ////////////////////////////////////////
 //  D - Få sqlite til å fungere      ///
