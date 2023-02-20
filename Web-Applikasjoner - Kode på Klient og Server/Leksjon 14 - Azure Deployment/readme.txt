@@ -78,6 +78,9 @@ D - Få sqlite til å fungere
 
     På portal.azure.com kan du klikke deg inn på appen din. Her finner du en mengde informasjon og valg. 
 
+    Dersom du får feilmelding når du laster opp prosjektet kan følgende hjelpe:
+    - Gå inn på Azure Portal og stopp  Appen din
+    - Slett mappen .vscode i prosjektmappen din
 
 
 ////////////////////////////////////////
