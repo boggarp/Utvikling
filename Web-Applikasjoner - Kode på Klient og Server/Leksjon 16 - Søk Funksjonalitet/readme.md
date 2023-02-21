@@ -10,8 +10,8 @@ Systemet gjør det mulig å søke i en mengde med vitser.
 
 
 På fremsiden er det et søkefelt. En eventlistener er lagt til dette
-søkefeltet slik at søk sendes til serveren hver gang noe endre her.
-Søket sendes med javascript kode på klienten (fetch)
+søkefeltet slik at søk sendes til serveren hver gang noe endres her.
+Søket sendes ved hjelp av javascript kode på klienten (fetch) til adressen /search.
 
 På serveren blir søket gjennomført på databasen, og resultatene sendes
 tilbake som json data.
