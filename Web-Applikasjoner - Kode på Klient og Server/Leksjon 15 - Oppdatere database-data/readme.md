@@ -1,13 +1,14 @@
-// --------------------Generell Info--------------------- //
+## Generell Info
 Kjør følgende kommando for å få alle pakkene-du trenger:
 npm install
 
+
+# Vitse-system
 Systemet viser vitser lagret i databasen.
 EN kan trykke Edit på en vits, da får en et skjema for å 
 redigere vitsen.
 
 ![Screenshot](Screenshot.png)
-
 
 
 
@@ -26,11 +27,8 @@ handleren /jokes/edit. Her blir databasen oppdatert,
 og brukeren sendes til fremsiden viss alt gikk korrekt.
 
 
-/////////////////////////////////////////////////////////////'
-/// Generell info:
-/////////////////////////////////////////////////////////////'
 
-
+## Mer Generell info:
 
 I setup.js står kode som kjøres i starten av de fleste express prosjekt
 
