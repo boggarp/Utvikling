@@ -10,9 +10,6 @@ redigere vitsen.
 
 ![Screenshot](Screenshot2.png)
 
-
-
-
 Hver vits skrives ut ved hjelp av handlebars, 
 og hver vits har en link/knapp
 som peker til /jokes/editForm?id=...

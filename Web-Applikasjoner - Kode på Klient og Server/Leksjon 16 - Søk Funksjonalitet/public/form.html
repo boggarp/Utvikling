@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Et eksempel på et HTML-form</title>
+</head>
+<body>
+
+    <h1>HTML-form (Skjema)</h1>
+    <nav>
+        <a href="/">Fremside</a>
+        <a href="/about">About</a>
+        <a href="/static_site.html">Statisk side</a>
+        <a href="/form.html">HTML-Skjema</a>
+  
+    </nav>
+
+    <div class="form">
+        <fieldset>
+            <legend>Skjemaet vårt</legend>
+
+            <form action="/sendInn" method="post">
+                <label for="navn">Navn:</label>
+                <input type="text" name="navn" id="navn">
+                <br>
+
+                <label for="epost">Epost:</label>
+                <input type="email" name="epost" id="epost">
+                <br>
+
+                <label for="fodt">Fødselsdato:</label>
+                <input type="date" name="fodt" id="fodt">
+                <br>
+
+                <label for="gave">Velkomstgave:</label><br>
+                <input type="radio" name="gave" value="DAB-radio">DAB-radio
+                <input type="radio" name="gave" value="Webkamera">Webkamera
+                <input type="radio" name="gave" value="Headset">Headset
+                <br>
+
+                <label for="valg">Valg:</label>
+                <br>
+                <input type="checkbox" name="valg[]" value="Laks">Laks
+                <input type="checkbox" name="valg[]" value="Grøt">Grøt
+                <input type="checkbox" name="valg[]" value="Pinnekjøtt">Pinnekjøtt
+                <br>
+
+                <button>Send inn</button> 
+
+            </form>
+        </fieldset>
+    </div>
+    
+</body>
+</html>
