@@ -15,8 +15,9 @@ D - Få sqlite til å fungere
 ## A - Klargjøring av koden din
 
 1. Package.json må ha "main" satt til hovedfilen din, og inni "scripts" må "start" peke til hovedfilen din.
+
+#### package.json:
 ```
-package.json:
 "main": "app.js",
 "scripts": {
 "start" : "node app.js"
@@ -24,8 +25,8 @@ package.json:
 ```
 
 2. Når du starter Express, må den lytte til porten som ligger lagret i process.env.PORT. 
+#### app.js:
 ```
-app.js:
 app.listen(process.env.PORT || 3000,  () => {
 console.log('Server is up! Check http://localhost:3000');
 });
