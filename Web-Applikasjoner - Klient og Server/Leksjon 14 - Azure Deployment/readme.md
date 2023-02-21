@@ -121,14 +121,16 @@ function loadDbToMemory(db_filename) {
 ```
 
 /**
- * 
- * @param {string} db_filename - en streng som representerer filnavnet for lagring av databasen.
- * @param {int} backupIntervalMinutes - et valgfritt tall som representerer tidsintervallet, i minutter,
- *                                    for funksjonen til å automatisk ta backup av databasen til fil.
- *                                    Standardverdien er 0.
- * @param {boolean} onlySchedule - en valgfri boolsk flagg som indikerer om man skal kun planlegge backup
- *                           av databasen eller faktisk lagre databasen til fil. Standardverdien er false.
- * @returns {boolean} indikerer om lagringsoperasjonen var vellykket eller ikke
+ * Lagrer en database i minnet til en fil på disken. 
+ * Hvis det er angitt, vil funksjonen også ta automatisk backup av databasen med en valgfri tidsintervall.
+ *
+ * @param {string} db_filename        - Filnavn for å lagre databasen
+ * @param {int} backupIntervalMinutes - Tidsintervall i minutter for automatisk backup. 
+ *                                      Standard er 0 (ingen backup).
+ *                                      
+ * @param {boolean} onlySchedule      - Hvis satt til true, vil funksjonen kun planlegge backup uten 
+ *                                      å faktisk lagre databasen. Standard er false (lagrer databasen).
+ * @returns {boolean}                 - Returnerer true hvis lagringen var vellykket, false ellers.
  */
 function saveDb(db_filename, backupIntervalMinutes = 0, onlySchedule = false) {
 	let IsSuccess = false;
