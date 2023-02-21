@@ -1,19 +1,18 @@
-//   ---------   README      ------------     //
+# Readme
 
-// Kjør følgende kommando for å få alle pakkene-du trenger:
-// npm install
+ Kjør følgende kommando for å få alle pakkene-du trenger:
+ npm install
 
 
-/   ---------   Fremgangsmåte - Deploy Gratis til Azure      ------------     //
+# Fremgangsmåte - Deploy Gratis til Azure
 
 A - Klargjøring av koden din 
 B - Lag prosjekt på Azure Portal
 C - Deploye fra Visual Studio
 D - Få sqlite til å fungere
 
-////////////////////////////////////////
-//  A - Klargjøring av koden din     ///
-////////////////////////////////////////
+
+## A - Klargjøring av koden din     
 
 1 - Package.json må ha "main" satt til hovedfilen din,
     og inni "scripts" må "start" peke til hovedfilen din.
