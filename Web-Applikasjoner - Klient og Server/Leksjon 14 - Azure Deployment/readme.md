@@ -82,18 +82,21 @@ Hvis du får feilmelding når du laster opp prosjektet kan prøve følgende:
 ##  D - Få sqlite til å fungere     
 
 ### Alternativ 1:
-Bruk dette utganspunktet: https://github.com/boggarp/Express-Handlebars---Utganspunkt-v2
+Bruk dette utganspunktet: https://github.com/boggarp/Express-Handlebars---Utganspunkt-v2  
 Det er konfigurert til å bruke databasen i "memory" mode når koden kjøres på azure.
 
 ### Alternativ 2:
 Endre tilkoblingen til databasen i koden din ved å erstatte linjen:
+```
 const db = sqlite3('database.db', {verbose: console.log}) //Tilkobling til databasen
+```
 
 Med følgende to linjer:
+```
 const db = loadDbToMemory('database.db'); //Laster databasen fra fil inn i minnet
 saveDb('database.db', 30, true); //Enable automatic saving of database to file every 30 minutes (Wait 30 minutes before first save)
-
-   Og legg inn disse funksjonene:
+```
+Og legg inn disse funksjonene:
 
 ```
 /**
