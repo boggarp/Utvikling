@@ -5,6 +5,9 @@ npm install
 
 # Vitse-system med søk
 Systemet gjør det mulig å søke i en mengde med vitser.
+![Screenshot](Screenshot.png)
+
+
 
 På fremsiden er det et søkefelt. En eventlistener er lagt til dette
 søkefeltet slik at søk sendes til serveren hver gang noe endre her.

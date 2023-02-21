@@ -5,19 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/styles.css">
+    <script src="/js/clientApp.js" defer></script>
     <title>{{title}}</title>
 </head>
 <body>
     {{>header}}
 
-    <div class="content">
-        {{#each jokes}}
-            <div class="joke">
-                <p>{{this.joke}}</p>
-                <p>Stars: {{this.stars}}</p>
-                <a href="/jokes/editForm?id={{this.id}}">Edit</a>
-            </div>
-        {{/each}}
+    <input type="text" id="searchField" placeholder="Enter search" autofocus>
+
+    <div id="resultsDiv">
     </div>
     
 </body>
