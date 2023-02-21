@@ -8,7 +8,6 @@ Systemet viser vitser lagret i databasen.
 Der et mulig å trykke Update på en vits, da får en et skjema for å 
 redigere vitsen.
 
-![Screenshot](Screenshot.png)
 
 
 
