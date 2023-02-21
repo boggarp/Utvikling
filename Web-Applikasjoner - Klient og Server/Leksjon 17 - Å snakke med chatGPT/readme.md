@@ -89,10 +89,10 @@ const sqlite3 = require('better-sqlite3')
 const db = sqlite3('database.db', {verbose:console.log})
 
 
-Kan du hjelpe oss med å besvare spørsmål om disse emnene? Vi vil gjerne lære mer om å kode og ønsker din hjelp!
+Kan du hjelpe oss med å besvare spørsmål om disse emnene?
 Jeg vil ikke at du svarer på noen spørsmål nå, jeg vil bare at du skal ha litt bakgrunnskunnskap når jeg fortsetter å stille
 spørsmål. Kan du unngå å komme med forslag nå. Bare si at du vil gjerne svare meg. Jeg har et konkret spørsmål å stille forstår du.
-Så ikke si noe, vent på at jeg stiller spørsmål. Du trrenger heller ikke oppsummere det jeg har skrevet.
+Så ikke si noe, vent på at jeg stiller spørsmål. Du trenger heller ikke oppsummere det jeg har skrevet.
 
 Takk!
 
