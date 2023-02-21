@@ -6,10 +6,10 @@
 
 # Fremgangsmåte - Deploy Gratis til Azure
 
-A - Klargjøring av koden din 
-B - Lag prosjekt på Azure Portal
-C - Deploye fra Visual Studio
-D - Få sqlite til å fungere
+A - Klargjøring av koden din  
+B - Lag prosjekt på Azure Portal  
+C - Deploye fra Visual Studio  
+D - Få sqlite til å fungere  
 
 
 ## A - Klargjøring av koden din
@@ -88,7 +88,7 @@ Det er konfigurert til å bruke databasen i "memory" mode når koden kjøres på
 Endre tilkoblingen til databasen i koden din ved å erstatte linjen:
 const db = sqlite3('database.db', {verbose: console.log}) //Tilkobling til databasen
 
-Med ffølgende to linjer:
+Med følgende to linjer:
 const db = loadDbToMemory('database.db'); //Laster databasen fra fil inn i minnet
 saveDb('database.db', 30, true); //Enable automatic saving of database to file every 30 minutes (Wait 30 minutes before first save)
 
