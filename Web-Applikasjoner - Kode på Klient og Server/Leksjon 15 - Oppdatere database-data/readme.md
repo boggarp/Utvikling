@@ -5,7 +5,7 @@ npm install
 
 # Vitse-system
 Systemet viser vitser lagret i databasen.
-EN kan trykke Edit på en vits, da får en et skjema for å 
+Der et mulig å trykke Update på en vits, da får en et skjema for å 
 redigere vitsen.
 
 ![Screenshot](Screenshot.png)
