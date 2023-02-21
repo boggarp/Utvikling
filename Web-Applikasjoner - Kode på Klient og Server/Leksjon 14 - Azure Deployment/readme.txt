@@ -4,7 +4,7 @@
 // npm install
 
 
-//   ---------   Fremgangsmåte Deploy to Azure      ------------     //
+/   ---------   Fremgangsmåte - Deploy Gratis til Azure      ------------     //
 
 A - Klargjøring av koden din 
 B - Lag prosjekt på Azure Portal
@@ -34,7 +34,7 @@ D - Få sqlite til å fungere
 //  B - Lag prosjekt på Azure Portal ///
 ////////////////////////////////////////
 
-1 - Logg på Azure portal, https://portal.azure.com/
+1 - Logg på Azure portal på https://portal.azure.com/
 
 2 - Trykk Create a Resource
 
@@ -42,12 +42,12 @@ D - Få sqlite til å fungere
 
 4 - Velg "Azure for Students" på Subscription, og velg en eksisterende eller lag en ny Resource Group
 
-5 - Skriv inn navn på app, og set publish til Code.
+5 - Skriv inn navn på app, og velg "Code" som publish-metode.
 
-6 - Under Runtime stack velger du Node 18 LTS.  OS settes til Linux, og Region til West Europe 
+6 - Under Runtime stack velger du Node 18 LTS, Linux som OS, "West Europe" som region
     (Ikke Norge, der "fantes" ikke gratis-alternativ.. Men bare sjekk..)
 
-7 - Velg F1 som Linux Plan. Dobbeltsjekkt at dette valget er gratis.
+7 - Velg F1 som Linux Plan og sjekk at dette er gratis.
 
 8 - Trykkk Next gjennom resten av valgene. Trykk til slutt Creat
 
@@ -67,19 +67,19 @@ D - Få sqlite til å fungere
     (trykk på Ctrl + Shift + P eller Cmd + Shift + P), søk etter "Azure: Sign In" 
     og følg instruksjonene for å logge på kontoen din.
 
-4 - Søk "Deploy to Web App" fra Command Palette. Følg instruksjonene i veiviseren for å velge prosjekt-mappen,
-    abonnementet ditt, og deretter prosjektet du laget på forrige side.
+4 - Fra Command Pallete, søk etter "Deploy to Web App". Følg instruksjonene i veiviseren for å velge prosjekt-mappen,
+    abonnementet ditt, og deretter prosjektet du oppprettet på Azure Portal.
 
 5 - Last opp koden din ved å søke på "Deploy" i Command Pallete. 
     Dette vil automatisk laste opp koden din til Azure App Service og starte applikasjonen.
 
-    Du finner logg for appen din her:
+    Du finner logg for appen din ved å gå til:
     https://APPLIKASJONSNAVN.scm.azurewebsites.net/
+/
+    På portal.azure.com kan du klikke deg inn på appen dinfor å finne en mengde informasjon og valg. 
 
-    På portal.azure.com kan du klikke deg inn på appen din. Her finner du en mengde informasjon og valg. 
-
-    Dersom du får feilmelding når du laster opp prosjektet kan følgende hjelpe:
-    - Gå inn på Azure Portal og stopp  Appen din
+    Hvis du får feilmelding når du laster opp prosjektet kan prøve følgende:
+    - Gå inn på Azure Portal og stopp appen din
     - Slett mappen .vscode i prosjektmappen din
 
 
@@ -87,11 +87,11 @@ D - Få sqlite til å fungere
 //  D - Få sqlite til å fungere      ///
 ////////////////////////////////////////
 
-1 - Bytt ut denne linjen her:
+1 - Endre tilkoblingen til databasen i koden din ved å erstatte linjen:
     const db = sqlite3('database.db', {verbose: console.log}) //Tilkobling til databasen
 
-   Med disse linjene her:
-    const db = loadDbToMemory('database.db'); //Load database from file into memory
+   Med flkgende to linjer:
+    const db = loadDbToMemory('database.db'); //Laster databasen fra fil inn i minnet
     saveDb('database.db', 30, true); //Enable automatic saving of database to file every 30 minutes (Wait 30 minutes before first save)
 
    Og legg inn disse funksjonene:
