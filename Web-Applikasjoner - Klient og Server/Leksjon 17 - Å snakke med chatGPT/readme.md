@@ -23,7 +23,7 @@ Vennligst husk å bytte ut alle forekomster av 'req' med 'request', og 'res' med
 
 - Express-session: Vi har lært om Express-session, en modul som lar oss lagre og hente ut data fra en sesjon på en nettleser.
 
-- Bcrypt: Vi har lært om Bcrypt, en modul som lar oss kryptere og dekryptere passord.
+- Bcrypt: Vi har lært om Bcrypt, en modul som lar oss kryptere og dekryptere passord. Du skal bare bruke de synkrone modulene i denne modulen. I stedet for genSalt skal du bruke genSaltSync, og du skal bruke hashSync istedet for hash.
 
 - Better-sqlite3: Vi har lært om Better-sqlite3, en modul som lar oss samhandle med en SQLite-database fra Node.js-koden.
 
