@@ -6,10 +6,10 @@
 
 # Fremgangsmåte - Deploy Gratis til Azure
 
-A - Klargjøring av koden din  
-B - Lag prosjekt på Azure Portal  
-C - Deploye fra Visual Studio  
-D - Få sqlite til å fungere  
+[A - Klargjøring av koden din](#a---klargjøring-av-koden-din)  
+[B - Lag prosjekt på Azure Portal](#B---lag-prosjekt-på-azure-portal)  
+[C - Deploye fra Visual Studio](#c---deploye-fra-visual-studio)  
+[D - Få sqlite til å fungere](#d---få-sqlite-til-å-fungere)
 
 
 ## A - Klargjøring av koden din
