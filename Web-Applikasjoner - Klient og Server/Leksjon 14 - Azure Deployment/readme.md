@@ -1,8 +1,7 @@
-
-### Bruke koden
- Kjør følgende kommando for å få alle pakkene-du trenger:
- npm install
-
+- Gratis måte å deploye blant annet node applikasjon til Azure (opptil 10 apper, 1GB disk hver)
+- Deploy med med utvidelse i Visual Studio Code. 
+- 60 CPU minuter pr. dag
+- applikasjonen stoppes automatisk viss den ikke får forespørsler, men starter igjen automatisk når man besøker nettsiden. (men det kan ta opp mot 1 minutt++), Kanskje det kan settes opp en liten hack for at det ikke skal skje... uptimerobot.com?
 
 # Fremgangsmåte - Deploy Gratis til Azure
 
@@ -34,7 +33,6 @@ console.log('Server is up! Check http://localhost:3000');
 
 
 ##  B - Lag prosjekt på Azure Portal
-
 
 1. Logg på Azure portal på https://portal.azure.com/
 

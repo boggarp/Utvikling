@@ -21,7 +21,7 @@ hbs.registerPartials(partialsPath);
 
 //Database
 const db = loadDbToMemory('database.db'); //Load database from file into memory
-saveDb('database.db', 30, true); //Enable automatic saving of database to file every 30 minutes (Wait 30 minutes before first save)
+saveDb('database.db', 15, true); //Enable automatic saving of database to file every 15 minutes (Wait 15 minutes before first save)
 
 exports.saveDb = saveDb;
 exports.app = app;
