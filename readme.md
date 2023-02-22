@@ -1,9 +1,16 @@
 # ITK Utvikling
 
-## Linker:
+## Lenker:
 - [Hefte](https://indd.adobe.com/view/7dae25a9-1aee-44c6-8a86-8362b30588b3)
 - [Utganspunkt Express Applikasjon](https://github.com/boggarp/Express-Handlebars---Utganspunkt-v2)
 - [Tips til hvordan snakke med ChatGP](https://github.com/boggarp/Utvikling/tree/main/Web-Applikasjoner%20-%20Klient%20og%20Server/Leksjon%2017%20-%20%C3%85%20snakke%20med%20chatGPT)
+
+
+## Leksjoner
+- [Grunnlegende koding](https://github.com/boggarp/Utvikling/tree/main/Grunnlegende%20Koding)
+- [HTML og CSS](https://github.com/boggarp/Utvikling/tree/main/HTML%20og%20CSS/)
+- [Javascript på klienten](https://github.com/boggarp/Utvikling/tree/main/Javascript%20p%C3%A5%20klienten)
+- [Web-Applikasjoner - Klient og Server](https://github.com/boggarp/Utvikling/tree/main/Web-Applikasjoner%20-%20Klient%20og%20Server)
 
 # CheatSheet
 - [npm](#npm)
