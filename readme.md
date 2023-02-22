@@ -41,9 +41,8 @@ app.post('/insertPerson (request,response) => {
     console.log(request.body)
 })
 ```
-
+### Query String input, /insert?id=2&name=Hans
 ```
-// Query String input, /insert?id=2&name=Hans
 app.get('/insert (request,response) => {
     console.log(request.query.id)
     console.log(request.query.name)
@@ -51,12 +50,12 @@ app.get('/insert (request,response) => {
 ```
 
 ## Handlebars
+### Skrive ut en variabel med navnet title
 ```
-// Skrive ut en variabel med navnet title
 {{title}}
 ```
+### Skrive ut alle elementer i tabellen data, der elementene er objekter med objektvariabel name
 ```
-// Skrive ut alle elementer i tabellen data, der elementene er objekter med objektvariabel name
 {{#each data}}
     <p>{{this.name}} </p>
 {{/each}}
