@@ -5,13 +5,6 @@ Den kan gå inn i tema dere ikke kan.
 For å hjelpe på dette, foreslår ChatGpt (og litt meg), at dere starter alle samtaler med denne teksten:
 
 ```
-# Tips til hvordan snakke med ChatGPT
-
-ChatGPT kan være nyttig, men også forvirrende.  
-Den kan gå inn i tema dere ikke kan.  
-For å hjelpe på dette, foreslår ChatGpt (og litt meg), at dere starter alle samtaler med denne teksten:
-
-```
 Hei ChatGPT! (Kan du lese slutten først? altså: dette er bare til info, vi trenger ikke tips nå)
 
 Jeg ønsker å stille deg spørsmål, men jeg vil ut at du skal finne svar innenfor det jeg kan.
@@ -50,6 +43,7 @@ app.use(express.urlencoded({ extended: true }));
 - På klientsiden kan du bruke funksjoner addEventListener og getElementById for å interagere med HTML-elementer, samt endring av CSS.
 
 - Du kan bruke fetch for å hente data som vi sender som json fra serveren til klient eller motsatt.
+  Du skal ikke bruke XMLHttpRequest, bare bruk fetch
 
 - Vi har følgende mappestruktur
     - public: Mappen som skal være direkte tilgjengelig
@@ -98,8 +92,5 @@ spørsmål. Kan du unngå å komme med forslag nå. Bare si at du vil gjerne sva
 Så ikke si noe, vent på at jeg stiller spørsmål. Du trenger heller ikke oppsummere det jeg har skrevet.
 
 Takk!
-
-```
-
 
 ```
