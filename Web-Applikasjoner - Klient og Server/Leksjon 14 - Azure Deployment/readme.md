@@ -1,3 +1,4 @@
+# Om Azure Web Apps
 - Gratis måte å deploye blant annet node applikasjon til Azure (opptil 10 apper, 1GB disk hver)
 - Deploy med med utvidelse i Visual Studio Code. 
 - 60 CPU minuter pr. dag
