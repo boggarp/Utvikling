@@ -30,6 +30,7 @@
 ### Endring av DOM, og koble kode til klikk
 
 ```
+#### index.html:
 <div id="minDiv> Eksempeltekst </div>
 
 <button id="button">Klikk her</button>
