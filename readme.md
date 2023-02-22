@@ -101,6 +101,24 @@ const info = sql.run("Spiderman",8)
 
 ```
 
+## Express-session
+
+### Oppsett
+```
+app.use(session( {
+    secret: "Lang_tekst_som_skal_være_hemmelig",
+    resave: false,
+    saveUninitialized : false
+}))
+```
+### Objektvariabler kan lagres i request.session
+```
+request.session.username = username
+request.session.logedIn = true
+request.session.shoppingcart = []
+```
+
+
 ## bcrypt
 
 ### Lage hash av passordet "qwerty", saltrounds satt til 10
