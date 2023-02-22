@@ -42,7 +42,7 @@ app.use(express.urlencoded({ extended: true }));
 - På klientsiden kan du bruke funksjoner addEventListener og getElementById for å interagere med HTML-elementer, samt endring av CSS.
 
 - Du kan bruke fetch for å hente data som vi sender som json fra serveren til klient eller motsatt.
-  Du skal ikke bruke XMLHttpRequest, bare bruk fetch
+  Du skal ikke bruke XMLHttpRequest, bare bruk fetch.
 
 - Vi har følgende mappestruktur
     - public: Mappen som skal være direkte tilgjengelig
