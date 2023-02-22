@@ -15,85 +15,16 @@
 - [Web-Applikasjoner - Klient og Server](https://github.com/boggarp/Utvikling/tree/main/Web-Applikasjoner%20-%20Klient%20og%20Server)
 
 # CheatSheet
-- [Javascript på klienten](#javascript-på-klienten)
 - [npm](#npm)
 - [Express](#express)
 - [Handlebars](#handlebars)
 - [better-sqlite3](#better-sqlite3)
 - [Express-session](#express-session)
 - [bcrypt](#bcrypt)
+- [Javascript på klienten](#javascript-på-klienten)
 
 
 
-## Javascript på klienten
-
-### Endring av DOM, og koble kode til klikk
-
-#### index.html:
-```
-<div id="minDiv> Eksempeltekst </div>
-
-<button id="button">Klikk her</button>
-```
-#### clientApp.js:
-```
-// Henter en diven med id="minDiv" og lagrer denne i en variabel.
-const minDiv = document.getElementById("minDiv")
-
-// Setter teksten inni minDiv til "Ny tekst"
-minDiv.innerText = "Ny tekst"
-
-// Setter en p-tag inni diven
-minDiv.innerHTML = "<p> Nytt avsnitt </p>"
-
-//Endrer css-egenskaper til et element
-minDiv.style.color = "red"
-
-// Legger til en funksjon som kjører ved klikk på knappen
-let button = document.getElementById("button")
-button.addEventListener("click", function () {
-   alert("Du trykket på knappen")
-}
-```
-
-### Sending av data som query string til server
-```
-let value=23 //Verdi som skal sendes
-let result = await fetch("/search?value="+value, {method:'get'})
-let resultData = await result.json()
-if(result.ok) {
-        console.log("Result OK")
-    } else {
-        console.log("Result NOT OK")
-    }
-```
-[Mer detaljer](https://github.com/boggarp/Utvikling/tree/main/Web-Applikasjoner%20-%20Klient%20og%20Server/Leksjon%2016%20-%20S%C3%B8k%20Funksjonalitet)
-
-
-
-### Sending av skjemadata til server
-```
-let form = document.getElementById("registerForm")
-let result = await fetch(form.action, {method:'post', body: new URLSearchParams(new FormData(form))})
-let resultData = await result.json()
-if(result.ok) {
-    console.log("Result OK")
-} else {
-    console.log("Result NOT OK")
-}
-```
-[Mer detaljer](https://github.com/boggarp/Utvikling/tree/main/Web-Applikasjoner%20-%20Klient%20og%20Server/Leksjon%2013%20-%20Post%20med%20Fetch)
-
-
-### Motta data fra server
-```
-///Console logger data fra /getData
-async function updateData() {
-  let response  = await fetch("/getData") //Åpner adressen /getData og henter resultatet
-  let data  = await response.json() //Konverterer fra json til objekt/array
-  console.log(data)
-```
-[Mer detaljer](https://github.com/boggarp/Utvikling/tree/main/Web-Applikasjoner%20-%20Klient%20og%20Server/Leksjon%2008%20-%20Client%20Side%20Rendering)
 
 
 ## npm
@@ -219,3 +150,73 @@ const hash = bcrypt.hashSync("qwerty", 10);
 ```
 const result = bcrypt.compareSync(password2, hash);
 ```
+
+## Javascript på klienten
+
+### Endring av DOM, og koble kode til klikk
+
+#### index.html:
+```
+<div id="minDiv> Eksempeltekst </div>
+
+<button id="button">Klikk her</button>
+```
+#### clientApp.js:
+```
+// Henter en diven med id="minDiv" og lagrer denne i en variabel.
+const minDiv = document.getElementById("minDiv")
+
+// Setter teksten inni minDiv til "Ny tekst"
+minDiv.innerText = "Ny tekst"
+
+// Setter en p-tag inni diven
+minDiv.innerHTML = "<p> Nytt avsnitt </p>"
+
+//Endrer css-egenskaper til et element
+minDiv.style.color = "red"
+
+// Legger til en funksjon som kjører ved klikk på knappen
+let button = document.getElementById("button")
+button.addEventListener("click", function () {
+   alert("Du trykket på knappen")
+}
+```
+
+### Sending av data som query string til server
+```
+let value=23 //Verdi som skal sendes
+let result = await fetch("/search?value="+value, {method:'get'})
+let resultData = await result.json()
+if(result.ok) {
+        console.log("Result OK")
+    } else {
+        console.log("Result NOT OK")
+    }
+```
+[Mer detaljer](https://github.com/boggarp/Utvikling/tree/main/Web-Applikasjoner%20-%20Klient%20og%20Server/Leksjon%2016%20-%20S%C3%B8k%20Funksjonalitet)
+
+
+
+### Sending av skjemadata til server
+```
+let form = document.getElementById("registerForm")
+let result = await fetch(form.action, {method:'post', body: new URLSearchParams(new FormData(form))})
+let resultData = await result.json()
+if(result.ok) {
+    console.log("Result OK")
+} else {
+    console.log("Result NOT OK")
+}
+```
+[Mer detaljer](https://github.com/boggarp/Utvikling/tree/main/Web-Applikasjoner%20-%20Klient%20og%20Server/Leksjon%2013%20-%20Post%20med%20Fetch)
+
+
+### Motta data fra server
+```
+///Console logger data fra /getData
+async function updateData() {
+  let response  = await fetch("/getData") //Åpner adressen /getData og henter resultatet
+  let data  = await response.json() //Konverterer fra json til objekt/array
+  console.log(data)
+```
+[Mer detaljer](https://github.com/boggarp/Utvikling/tree/main/Web-Applikasjoner%20-%20Klient%20og%20Server/Leksjon%2008%20-%20Client%20Side%20Rendering)
