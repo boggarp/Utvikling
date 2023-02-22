@@ -8,7 +8,6 @@ For å hjelpe på dette, foreslår ChatGpt (og litt meg), at dere starter alle s
 Hei ChatGPT! (Kan du lese slutten først? altså: dette er bare til info, vi trenger ikke tips nå)
 
 Jeg ønsker å stille deg spørsmål, men jeg vil ut at du skal finne svar innenfor det jeg kan.
-
 Temaet er web applikasjoner med node.js og express.
 Her er hvilke konvensjoner du skal følge i svarene:
 - Jeg skal skrive kode i Visual Studio Code (VSCode)
