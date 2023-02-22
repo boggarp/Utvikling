@@ -5,6 +5,16 @@
 - [Utganspunkt Express Applikasjon](https://github.com/boggarp/Express-Handlebars---Utganspunkt-v2)
 
 # CheatSheet
+- [npm](#npm)
+- [Express](#Express)
+- [Handlebars](#Handlebars)
+- [better-sqlite3](#better-sqlite3)
+- [Express-session](#Express-session)
+- [bcrypt](#bcrypt)
+
+
+
+
 
 ## npm
 
