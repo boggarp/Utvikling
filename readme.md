@@ -4,9 +4,9 @@
 - [Hefte](https://indd.adobe.com/view/7dae25a9-1aee-44c6-8a86-8362b30588b3)
 - [Utganspunkt Express Applikasjon](https://github.com/boggarp/Express-Handlebars---Utganspunkt-v2)
 
-## CheatSheet
+# CheatSheet
 
-### npm
+## npm
 
 ``` 
 //Opprette nødvendige konfigurasjonsfiler ved oppstart nytt prosjekt  
@@ -25,19 +25,18 @@ nodemon app.js -e js,hbs
 npm install 
 ```
 
-### Express
+## Express
 
 
-    
+### Handler som repsonderer med rendret hbs fil    
 ```
-// Handler som repsonderer med rendret hbs fil
 app.get('/about', (request, response) => {
      response.render(about.hbs", {data: ["A","B"])
 })
 ```
 
+### HTML-form input
 ```
-// HTML-form input
 app.post('/insertPerson (request,response) => {
     console.log(request.body)
 })
@@ -51,7 +50,7 @@ app.get('/insert (request,response) => {
 })
 ```
 
-### Handlebars
+## Handlebars
 ```
 // Skrive ut en variabel med navnet title
 {{title}}
@@ -63,7 +62,7 @@ app.get('/insert (request,response) => {
 {{/each}}
 ```
 
-### better-sqlite3
+## better-sqlite3
 
 ```
 // All
