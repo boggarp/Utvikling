@@ -5,47 +5,51 @@ Den kan gå inn i tema dere ikke kan.
 For å hjelpe på dette, foreslår ChatGpt (og litt meg), at dere starter alle samtaler med denne teksten:
 
 ```
-Hei ChatGPT!
+# Tips til hvordan snakke med ChatGPT
 
-Vi er elever som lærer å kode, og vi vil gjerne spørre deg om noen ting. Her er en liste over emner som vi har lært om, sammen med en kort beskrivelse av hva vi allerede vet:
-- Vi bruker teksteditoren  Visual Studio Code (VSCode)
-- Bruk bare Javascript, SQL, HTML og CSS på koden du skriver
-- Node: Vi har lært å bruke Node.js som en plattform for å kjøre JavaScript-kode utenfor en nettleser. Vi har lært å skrive og kjøre Node.js-skript på vår lokale maskin. Vi bruker alltid Node sammen med Express.
+ChatGPT kan være nyttig, men også forvirrende.  
+Den kan gå inn i tema dere ikke kan.  
+For å hjelpe på dette, foreslår ChatGpt (og litt meg), at dere starter alle samtaler med denne teksten:
 
-- Express: Vi har lært om Express, et rammeverk for Node.js som gir oss muligheten til å bygge webapplikasjoner. Vi har lært å bruke Express til å definere ruter, håndtere forespørsler og sende svar tilbake til klienten. Vi har kalt hovedfilen vår app.js.
+```
+Hei ChatGPT! (Kan du lese slutten først? altså: dette er bare til info, vi trenger ikke tips nå)
 
-- Vi bruker ikke router (express.Router();). Kan du sørge for å aldri bruke denne funksjonaliteten i forslagene dine?
+Jeg ønsker å stille deg spørsmål, men jeg vil ut at du skal finne svar innenfor det jeg kan.
 
-- For å gjøre ting litt enklere har vi skrevet request og response istedet for req og res i parameterene i handleren. Kan du alltid bruke 'request' og 'response' i stedet for 'req' og 'res' i express handlerene, slik at det blir tydeligere for oss å forstå hva som skjer?
-Vennligst husk å bytte ut alle forekomster av 'req' med 'request', og 'res' med 'response', for å sikre at koden din følger konvensjonene vi har avtalt på dette prosjektet.
+Temaet er web applikasjoner med node.js og express.
+Her er hvilke konvensjoner du skal følge i svarene:
+- Jeg skal skrive kode i Visual Studio Code (VSCode)
+- Svarene skal være relatert til kodespråket Javascript, SQL, HTML og CSS 
+- Applikasjonene skal lages med Node, og skal alltid bruke modulen Express.
 
-- HBS: Vi har lært om HBS, en HTML-templating-engine som gir oss muligheten til å gjenbruke HTML-kode og dynamisk generere HTML-sider.
+- Appens hovedfil skal være app.js. Her legger vi alle handlerene.
 
-- Express-session: Vi har lært om Express-session, en modul som lar oss lagre og hente ut data fra en sesjon på en nettleser.
+- Koden skal ikke bruker router (express.Router();)
 
-- Bcrypt: Vi har lært om Bcrypt, en modul som lar oss kryptere og dekryptere passord. Du skal bare bruke de synkrone modulene i denne modulen. I stedet for genSalt skal du bruke genSaltSync, og du skal bruke hashSync istedet for hash.
+- Alle forekomster av 'req' skal byttes med 'request', og 'res' skal byttes med 'response'
 
-- Better-sqlite3: Vi har lært om Better-sqlite3, en modul som lar oss samhandle med en SQLite-database fra Node.js-koden.
+- Modulen hbs skal brukes for å gjøre server-side rendering
 
-- Vi har brukt mest html-forms med post-metoden, og query parameters som input til node applikasjonen. Kan du unngå helt å bruke 
-  request.params som input metode?
+- Modulen express-session skal brukes for å gi cookies til brukeren, og for innlogging og annet som krever at brukeren huskes.
 
-- Når vi bruker better-sqlite3 har vi gjort det etter denne standarden:
-  const sql = db.prepare('SELECT * FROM biler');
-  const biler = sql.all();
-  Vi har med andre ord kalt statementen for sql, for å tydeliggjør at teksten på denne linjen hovedsaklig er sql-kode.
-  Kan du også altid endre variabelnavnen statement til sql når jeg spør om spørsmål relatert til better-sqlite3?
+- Modulen Bcrypt skal brukes for å hashe passord. Du skal bare bruke de synkrone modulene i denne modulen. Ikke bruk funksjonen genSalt, bruk heller funksjonen genSaltSync. Ikke bruk funksjonen hash, bruk heller hashSync.
 
-- Synkrone operasjoner: Vi har lært å bruke synkrone funksjoner når de er tilgjengelige. Det vil si, når vi jobber med funksjoner som ikke blokkerer prosessen.
+- Modulen better-sqlite3 skal brukes for å gi databasefunksjonalitet.
+  når du lager statements med better-sqlite3 skal variabelen hete sql.
 
-- Asynkrone operasjoner: Vi har lært å bruke async og await når vi jobber med asynkrone funksjoner. Vi har ikke gått inn i å bruke .then.
-
-- Erfaring med JavaScript på klient-siden, inkludert bruk av addEventListener og getElementById for å interagere med HTML-elementer, samt endring av CSS.
-
-- Vi har brukt litt fetch for å hente data som vi sender som json fra serveren, men ikke så mye.
+- For innput til node applikasjonen skal du bruke html-forms med post-metoden, eller query parameters . Du skal ikke bruke request-params som input metode.
 
 - Vi har stilt inn node til å kunne enkelt håndtere html-forms som sendes med post-metoden ved hjelp av denne koden:  
 app.use(express.urlencoded({ extended: true }));
+
+
+- Når det finnes en synkron måte å gjøre ting på, så skal du velge denne metoden.
+
+- Viss noe ikke kan gjøres synkront, så kan du bruke asynkrone opperasjoner. Du skal bruke async og await. Ikke bruk then.
+
+- På klientsiden kan du bruke funksjoner addEventListener og getElementById for å interagere med HTML-elementer, samt endring av CSS.
+
+- Du kan bruke fetch for å hente data som vi sender som json fra serveren til klient eller motsatt.
 
 - Vi har følgende mappestruktur
     - public: Mappen som skal være direkte tilgjengelig
@@ -88,12 +92,14 @@ app.use(session( {
 const sqlite3 = require('better-sqlite3')
 const db = sqlite3('database.db', {verbose:console.log})
 
-
 Kan du hjelpe oss med å besvare spørsmål om disse emnene?
 Jeg vil ikke at du svarer på noen spørsmål nå, jeg vil bare at du skal ha litt bakgrunnskunnskap når jeg fortsetter å stille
 spørsmål. Kan du unngå å komme med forslag nå. Bare si at du vil gjerne svare meg. Jeg har et konkret spørsmål å stille forstår du.
 Så ikke si noe, vent på at jeg stiller spørsmål. Du trenger heller ikke oppsummere det jeg har skrevet.
 
 Takk!
+
+```
+
 
 ```
