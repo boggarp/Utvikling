@@ -9,8 +9,7 @@
 ### npm
 
 ``` 
-//Opprette nødvendige konfigurasjonsfiler ved oppstart nytt prosjekt  
-npm init -y 
+npm init -y //Opprette nødvendige konfigurasjonsfiler ved oppstart nytt prosjekt  
 ```
 ##### 
 
