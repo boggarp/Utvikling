@@ -100,3 +100,14 @@ const info = sql.run("Spiderman",8)
     WHERE person_id=(?)
 
 ```
+
+## bcrypt
+
+### Lage hash av passordet "qwerty", saltrounds satt til 10
+```
+const hash = bcrypt.hashSync("qwerty", 10);
+```
+### Sjekke om passordet "QwertY" samsvarer med hashen gitt QwertY blir hashet, viss hashen er lik returneres true, ellers false
+```
+const result = bcrypt.compareSync(password2, hash);
+```
