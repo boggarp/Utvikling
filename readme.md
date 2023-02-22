@@ -9,15 +9,23 @@
 ### npm
 
 ``` 
-npm init -y //Opprette nødvendige konfigurasjonsfiler ved oppstart nytt prosjekt  
+//Opprette nødvendige konfigurasjonsfiler ved oppstart nytt prosjekt  
+npm init -y 
 ```
-##### 
+```
+//Installere Express, Handlebars og better-sqlite3 
+npm install express, hbs, better-sqlite3
+```
 
-
-#### Installere Express, Handlebars og better-sqlite3 
-``` npm install express, hbs, better-sqlite3  ```
-
-#### Installere nodemon globalt
-``` npm install nodemon -g  ```
-nodemon app.js -e js,hbs //Autorestarter app.js ved filendringer på filtypen js og hbs
-npm install //Installerer alle pakkene som hører til et prosjekt
+```
+//Installere nodemon globalt
+npm install nodemon -g  
+```
+```
+//Autorestarter app.js ved filendringer på filtypen js og hbs
+nodemon app.js -e js,hbs 
+```
+```
+//Installerer alle pakkene som hører til et prosjekt
+npm install 
+```
