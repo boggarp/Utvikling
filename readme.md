@@ -1,7 +1,7 @@
 # ITK Utvikling
 
 ## Lenker:
-- [Hefte](https://indd.adobe.com/view/7dae25a9-1aee-44c6-8a86-8362b30588b3)
+- [Hefte](https://indd.adobe.com/view/38062418-9d87-4b6e-b4fb-c907cd10f942)
 - [Utganspunkt Express Applikasjon](https://github.com/boggarp/Express-Handlebars---Utganspunkt-v2)
 - [Tips til hvordan snakke med ChatGP](https://github.com/boggarp/Utvikling/tree/main/Web-Applikasjoner%20-%20Klient%20og%20Server/Leksjon%2017%20-%20%C3%85%20snakke%20med%20chatGPT)
 - [Deployment til Azure](https://github.com/boggarp/Utvikling/tree/main/Web-Applikasjoner%20-%20Klient%20og%20Server/Leksjon%2014%20-%20Azure%20Deployment)
